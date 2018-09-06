@@ -7,6 +7,15 @@
  */
 
 /* ==========================================================================
+
+GOOGLE FONTS USED:
+
+font-family: 'Roboto', sans-serif;
+
+font-family: 'Open Sans', sans-serif;
+ ========================================================================== */
+
+/* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
@@ -14,6 +23,7 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*
@@ -94,111 +104,201 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* 
-    Created on : 19-may-2018, 20:47:17
-    Author     : Idznak
-*/
-body{
-    margin-right: 5em;
-    margin-left: 5em;
-    height: 100%;
-    overflow: hidden;
-    background: url(../background.png) no-repeat center;
-    background-size: contain;
-    background-origin:content-box;
+* {
+    box-sizing: border-box;
 }
 
-#firstG{
-    width:25%;
-    height:10%;
-    display:block;
-    overflow: hidden;
-    transform: translate3d(0,0,0);
+/* Style the body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding:0;
+}
+
+/* Header/logo Title */
+header {
+    padding: 10px;
     text-align: center;
-    padding-top: 10%;
-    opacity: 1;
-    float:left;
-    z-index: 1;
+    background: #4caf50;
+
 }
-#firstO{
-    width:15%;
-    height:10%;
-    display:block;
+
+h3{
+    color: #ffd95a;
+}
+
+#alfonsaurus{
+    max-width: 60%;
+    margin:auto;
+}
+
+h2{
+    color:#f9a825;
+}
+
+/*Sidebar download button*/
+.btn {
+    background-color: #f9a825;
+    border: none;
+
+    padding: 12px 30px;
+    cursor: pointer;  
+    margin:10px auto auto auto;
+
+}
+
+.btnLink{
+    font-size:20px; 
+    text-decoration: none;
+    color: white;
+}
+
+.fa-download{
+    color: white;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: #ffd95a;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
     overflow: hidden;
-    transform: translate3d(0,0,0);
+    background-color: #f9a825;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
     text-align: center;
-    padding-top: 5%;
-    opacity: 1;
-    float:left;
-    z-index: 1;
-    
+    padding: 14px 20px;
+    text-decoration: none;
 }
-#secondO{
-    width:15%;
-    height:10%;
-    display:block;
-    overflow: hidden;
-    transform: translate3d(0,0,0);
+
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #ffd95a;
+    color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+    background-color: #c17900;
+    color: white;
+}
+
+/* Column container */
+.row {  
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {   
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Fake image, just for this example */
+.photo {
+    background-color: #aaa;
+    width: 60%;
+    padding: 10px;
+    margin:auto;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
     text-align: center;
-    padding-top: 5%;
-    opacity: 1;
-    float:left;
-    z-index: 1;
+    background: #ddd;
 }
-#secondG{
-    width:15%;
-    height:30%;
-    display:block;
-    overflow: hidden;
-    transform: translate3d(0,0,0);
+
+
+.fa-twitter{
+    padding: 20px;
+    font-size: 30px;
+    width: 100px;
     text-align: center;
-    padding-top:15%;
-    opacity: 1;
-    float:left;
-    z-index: 1;
+    text-decoration: none;
+    margin: 5px 2px;
+    background: #f9a825;
+    color:#4caf50; 
 }
-#onlyL{
-    width:10%;
-    height:20%;
-    display:block;
-    overflow: hidden;
-    transform: translate3d(0,0,0);
+.fa-twitter:hover {
+    opacity: 0.7;
+    color:white;
+}
+
+.fa-linkedin{
+    padding: 20px;
+    font-size: 30px;
+    width: 100px;
     text-align: center;
-    opacity: 1;
-    float:left; 
-    z-index: 1;
+    text-decoration: none;
+    margin: 5px 2px;
+    background: #f9a825;
+    color:#4caf50; 
 }
-#onlyE{
-    width:12%;
-    height:15%;
-    display:block;
-    overflow: hidden;
-    transform: translate3d(0,0,0);
+.fa-flickr:hover {
+    opacity: 0.7;
+    color:white;
+}
+
+.fa-flickr{
+    padding: 20px;
+    font-size: 30px;
+    width: 100px;
     text-align: center;
-    padding-top: 10%;
-    opacity: 1;
-    float:left;
-    z-index: 1;
+    text-decoration: none;
+    margin: 5px 2px;
+    background: #f9a825;
+    color:#4caf50; 
 }
-#searchBarContainer{
-    width:100%;
-    display:block; 
-    position:relative;
-    clear:both;
+.fa-linkedin:hover {
+    opacity: 0.7;
+    color:white;
 }
-#searchBar{
-    width:60%;
-    display:block;
-    margin-left: 20%;
-    z-index: 1;
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {   
+        flex-direction: column;
+    }
 }
-.transparent {
-    background-color: transparent !important;
-    box-shadow: inset 0px 1px 0 rgba(0,0,0,.075);
-}
-.left-border-none {
-    border-left:none !important;
-    box-shadow: inset 0px 1px 0 rgba(0,0,0,.075);
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
 }
 
 
@@ -287,9 +387,9 @@ body{
 }
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
